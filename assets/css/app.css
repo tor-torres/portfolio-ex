@@ -1,0 +1,791 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+}
+
+ /* STYLE FOR MESSENGER ICON  */
+.chat-icon-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.fa-facebook-messenger{
+    opacity: 0.5;
+    color: rgb(68, 69, 71);
+    cursor: pointer;
+    font-size: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+}
+
+.fa-facebook-messenger:hover{
+    opacity: 100%;
+}
+
+/* STYLE FOR NAVIGATION BAR */
+.header-item a i{
+    color: #e2dede;
+    font-size: 200%;
+    padding:20px;
+    margin-right: 2rem;
+}
+
+.navbar-brand {
+    max-width: 10%;
+}
+
+.nav-item {
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+.nav-link:hover, .nav-link:active{
+    color: rgb(61, 106, 255);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding-bottom: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.navbar-bg {
+    background-color: #fff;
+}
+
+.nav-icon{
+    display: none;
+}
+
+/* STYLE FOR LANDING PAGE HEADER */
+#particles-js {
+    min-height: 100vh;
+    position: relative;
+    background: #1c1c1c;
+    background: -webkit-linear-gradient(0deg, #1c1c1c 0%, #231d42 100%);
+    background: linear-gradient(0deg, #1c1c1c 0%, #231d42 100%);
+}
+
+.particles-js-canvas-el {
+    height: 100vh !important;
+}
+
+.container-home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+}
+
+.hero {
+    max-width: 100%;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 1s, 2s;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.name-span {
+    font-size: 35px;
+}
+
+.lead {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 80%;
+    font-weight: 500;
+    text-align: justify;
+    letter-spacing: 2px;
+}
+
+/* THIS STYLE FOR FULL NAME GLITCH EFFECT  */
+.glitch-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(33, 33, 33, 0);
+}
+
+.glitch {
+    position: relative;
+    font-size: 100%;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    color: #fff;
+    letter-spacing: 5px;
+    z-index: 1;
+}
+
+.glitch:before {
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(33, 33, 33, 0);
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-before 3s infinite linear alternate-reverse;
+}
+
+.glitch:after {
+    content: attr(data-glitch);
+    position: absolute;
+    top: 0;
+    left: 2px;
+    width: 100%;
+    color: #fff;
+    background-color: rgba(33, 33, 33, 0);
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-after 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-before {
+    0% {
+        clip: rect(61px, 9999px, 52px, 0);
+    }
+
+    5% {
+        clip: rect(33px, 9999px, 144px, 0);
+    }
+
+    10% {
+        clip: rect(121px, 9999px, 115px, 0);
+    }
+
+    15% {
+        clip: rect(144px, 9999px, 162px, 0);
+    }
+
+    20% {
+        clip: rect(62px, 9999px, 180px, 0);
+    }
+
+    25% {
+        clip: rect(34px, 9999px, 42px, 0);
+    }
+
+    30% {
+        clip: rect(147px, 9999px, 179px, 0);
+    }
+
+    35% {
+        clip: rect(99px, 9999px, 63px, 0);
+    }
+
+    40% {
+        clip: rect(188px, 9999px, 122px, 0);
+    }
+
+    45% {
+        clip: rect(154px, 9999px, 14px, 0);
+    }
+
+    50% {
+        clip: rect(63px, 9999px, 37px, 0);
+    }
+
+    55% {
+        clip: rect(161px, 9999px, 147px, 0);
+    }
+
+    60% {
+        clip: rect(109px, 9999px, 175px, 0);
+    }
+
+    65% {
+        clip: rect(157px, 9999px, 88px, 0);
+    }
+
+    70% {
+        clip: rect(173px, 9999px, 131px, 0);
+    }
+
+    75% {
+        clip: rect(62px, 9999px, 70px, 0);
+    }
+
+    80% {
+        clip: rect(24px, 9999px, 153px, 0);
+    }
+
+    85% {
+        clip: rect(138px, 9999px, 40px, 0);
+    }
+
+    90% {
+        clip: rect(79px, 9999px, 136px, 0);
+    }
+
+    95% {
+        clip: rect(25px, 9999px, 34px, 0);
+    }
+
+    100% {
+        clip: rect(173px, 9999px, 166px, 0);
+    }
+}
+
+@keyframes noise-after {
+    0% {
+        clip: rect(26px, 9999px, 33px, 0);
+    }
+
+    5% {
+        clip: rect(140px, 9999px, 198px, 0);
+    }
+
+    10% {
+        clip: rect(184px, 9999px, 89px, 0);
+    }
+
+    15% {
+        clip: rect(121px, 9999px, 6px, 0);
+    }
+
+    20% {
+        clip: rect(181px, 9999px, 99px, 0);
+    }
+
+    25% {
+        clip: rect(154px, 9999px, 133px, 0);
+    }
+
+    30% {
+        clip: rect(134px, 9999px, 169px, 0);
+    }
+
+    35% {
+        clip: rect(26px, 9999px, 187px, 0);
+    }
+
+    40% {
+        clip: rect(147px, 9999px, 137px, 0);
+    }
+
+    45% {
+        clip: rect(31px, 9999px, 52px, 0);
+    }
+
+    50% {
+        clip: rect(191px, 9999px, 109px, 0);
+    }
+
+    55% {
+        clip: rect(74px, 9999px, 54px, 0);
+    }
+
+    60% {
+        clip: rect(145px, 9999px, 75px, 0);
+    }
+
+    65% {
+        clip: rect(153px, 9999px, 198px, 0);
+    }
+
+    70% {
+        clip: rect(99px, 9999px, 136px, 0);
+    }
+
+    75% {
+        clip: rect(118px, 9999px, 192px, 0);
+    }
+
+    80% {
+        clip: rect(1px, 9999px, 83px, 0);
+    }
+
+    85% {
+        clip: rect(145px, 9999px, 98px, 0);
+    }
+
+    90% {
+        clip: rect(121px, 9999px, 154px, 0);
+    }
+
+    95% {
+        clip: rect(156px, 9999px, 44px, 0);
+    }
+
+    100% {
+        clip: rect(67px, 9999px, 122px, 0);
+    }
+}
+
+/* THIS STYLE FOR THE BUTTON EFFECT */
+.btn {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(61, 106, 255);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: rgb(61, 106, 255);
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    margin-right: 20px;
+}
+
+.btn:hover {
+    background: rgb(61, 106, 255);
+    box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+    color: #fff;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.btn:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+}
+
+.btn::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.btn:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+
+
+/* THIS STYLE IS FOR ABOUT SECTION PAGE  */
+#about {
+    background: rgb(255,255,255);
+    background-color:hsl(0, 0%, 100%);
+    min-height: 100vh;
+    padding: 100px 0;
+}
+
+.about {
+    color: #1c1c1c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+    text-align: right;
+}
+
+.about-desc {
+    color: #1c1c1c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 80%;
+    letter-spacing: 2px;
+    padding: 20px 0;
+    text-align: justify;
+    text-indent: 2rem;
+}
+
+.about-hero {
+    max-width: 100%;
+    border-radius: 1rem 2rem;
+    transition: box-shadow 0.3s ease;
+}
+  
+.about-hero:hover {
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+.goal-section{
+    padding: 50px 0;
+}
+
+.goal-title{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 4002;
+    text-transform: uppercase;
+}
+
+hr{
+    border-radius: 20px;
+    background: linear-gradient(189deg, rgba(3,115,249,1) 0%, rgba(18,39,62,1) 100%);
+    height: 5px;
+    border: none;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.goal-text{
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-size: 80%;
+}
+
+/* THIS STYLE IS FOR EDUCATION JOURNEY FOR ABOUT SECTION */
+.main-timeline {
+    position: relative;
+}
+
+.main-timeline::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    background-color: rgb(61, 106, 255);
+    top: 10%;
+    bottom: 35%;
+    left: 50%;
+    margin-left: -4px;
+}
+.educ{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 200%;
+    font-weight: 600;
+}
+
+.educ .my-journey{
+    color: #575656;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.timeline{
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -11px;
+    background-color: rgb(61, 106, 255);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left{
+    padding: 0px 40px 20px 0px;
+    left: 0;
+}
+
+.content-left{
+    font-size: 90%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: right;
+}
+
+.content-right{
+    font-size: 90%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.content-left h5, .content-right h5{
+    padding-top: 15px;
+    font-size: 90%;
+}
+
+.content-left p, .content-right p{
+    font-size: 60%;
+}
+
+.right{
+    padding: 0px 0px 20px 40px;
+    left: 50%;
+}
+
+.right::after {
+    left: -14px;
+}
+
+/* THIS STYLE IS FOR THE PORTFOLIO SECTION */
+#portfolio {
+    min-height: 100vh;
+    padding: 100px 0;
+    background-color: #FFA41B;
+}
+
+.portfolio-title {
+    color: hsl(0, 0%, 97%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+}
+
+.port-img{
+    height: 50%;
+    width: 50%;
+}
+
+
+/* THIS STYLE IS FOR FOOTER SECTION */
+#footer {
+    min-height: 20vh;
+    background-color: rgb(61, 106, 255);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer {
+    padding: 50px 0 20px 0;
+}
+
+.footer-text{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 70%;
+    text-align: justify;
+    letter-spacing: 2px;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.social-links {
+    font-size: 200%;
+    color: #fff; 
+    text-align: center;
+}
+
+.social-links i{
+    padding: 10px;
+    color: #fff;
+}
+
+.footer-info ul {
+    text-align: left;
+    list-style: none;
+}
+
+.footer-info li a{
+    color: #fff;
+    padding: 5px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90%;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer-info i {
+    color: #fff;
+    padding-right: 10px;
+    
+}
+
+.copyright{
+    padding: 20px;
+    color: #fff;
+    font-size: 50%;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    letter-spacing: 0.20rem;
+}
+
+/* MEDIA QUERY STYLE FOR SMALL DEVICES  */
+@media only screen and (max-width: 768px) {
+
+    .aos-item {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .navbar-bg{
+        text-align: center;
+    }
+
+    .nav-link span{
+        display: none;
+    }
+    
+    .nav-icon{
+        display: inline-block;
+        color: rgb(61, 106, 255);
+        font-size: 150%;
+        margin-left: 0;
+    }
+
+    .nav-item{
+        padding-right: 20px;
+    }
+
+    .header-links{
+        position: absolute;
+        top: 10%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        z-index: 100;
+        font-size: 200%;
+    }
+
+    .home-title{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .glitch{
+        margin: 0 auto; 
+    }
+    .lead{
+        text-align: center;
+    }
+
+    .name-span {
+        display: none;
+    }
+
+    .navbar-brand {
+        max-width: 20%;
+    }
+
+    .navbar-bg {
+        background-color: #fff;
+    }
+
+    .btn {
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+
+    .home-img-col{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about {
+        padding-top: 150px;
+    }
+
+    .about {
+        text-align: center;
+    }
+
+    .about-hero{
+        height: 200px;
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .about-svg{
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-desc{
+        padding: 30px 10px;
+    }
+
+    .main-timeline::after{
+        bottom: 40%;
+    }
+    .about-btn{
+        text-align: center;
+    }
+
+    #resume-btn, #portfolio-btn{
+        left: 0;
+        transform: translateX(0);
+        margin: 0 10px;
+    }
+
+    .port-img{
+        max-width: 30%;
+    }
+
+    .portfolio-title{
+        text-align: center;
+    }
+
+    .footer-text{
+        padding: 0 20px;
+    }
+
+    .social-links{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .social-links i {
+        padding: 0 15px 10px 20px;
+    }
+    
+}
+
+/* MEDIUM DEVICES */
